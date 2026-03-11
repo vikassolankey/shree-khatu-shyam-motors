@@ -159,9 +159,14 @@ export const CertificatesSection = () => {
                 <img src={selectedCert.image} alt={selectedCert.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </div>
               <div className="flex gap-4">
-                <button className="flex-1 bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2">
+                <a
+                  href={selectedCert?.title === 'Udyam Registration' ? '/gallery/udyam.pdf' : '/gallery/udyam.pdf'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2"
+                >
                   <Download className="w-5 h-5" /> Download PDF
-                </button>
+                </a>
                 <button onClick={() => setSelectedCert(null)} className="flex-1 bg-white/5 text-white py-4 rounded-xl font-bold">
                   Close Preview
                 </button>
