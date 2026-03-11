@@ -351,10 +351,15 @@ export const Footer = () => (
           <ul className="space-y-4 text-gray-400 text-sm">
             <li className="flex gap-3">
               <MapPin className="w-5 h-5 text-primary shrink-0" />
-              <span>
+              <a 
+                href="https://maps.app.goo.gl/3cy4Vz4fLxjHuScAA" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
                 Ground Floor, Service Rd, nearby 1 Mandi Chauraha, Surya Nagar,
                 Mathura, UP 281004
-              </span>
+              </a>
             </li>
             <li className="flex gap-3">
               <Phone className="w-5 h-5 text-primary shrink-0" />

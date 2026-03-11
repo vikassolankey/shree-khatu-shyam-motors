@@ -20,9 +20,14 @@ export const ContactSection = () => {
 
             <div className="space-y-8">
               {[
-                { icon: MapPin, label: 'Our Office', val: 'Ground Floor, Service Rd, nearby 1 Mandi Chauraha, Surya Nagar, Mathura, UP 281004' },
-                { icon: Phone, label: 'Call Us', val: '+91 8218258915' },
-                { icon: Mail, label: 'Email Us', val: 'Info@shreekhatushyammotors.co.in' },
+                { 
+                  icon: MapPin, 
+                  label: 'Our Office', 
+                  val: 'Ground Floor, Service Rd, nearby 1 Mandi Chauraha, Surya Nagar, Mathura, UP 281004',
+                  link: 'https://maps.app.goo.gl/3cy4Vz4fLxjHuScAA'
+                },
+                { icon: Phone, label: 'Call Us', val: '+91 8218258915', link: 'tel:+918218258915' },
+                { icon: Mail, label: 'Email Us', val: 'Info@shreekhatushyammotors.co.in', link: 'mailto:Info@shreekhatushyammotors.co.in' },
               ].map((item, i) => (
                 <motion.div 
                   key={i} 
@@ -30,14 +35,25 @@ export const ContactSection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.15, duration: 0.6 }}
-                  className="flex gap-6 items-start"
+                  className="flex gap-6 items-start group"
                 >
-                  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0">
-                    <item.icon className="w-6 h-6 text-primary" />
+                  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
+                    <item.icon className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
                   </div>
                   <div>
                     <p className="text-gray-500 text-sm font-bold uppercase tracking-wider mb-1">{item.label}</p>
-                    <p className="text-white text-lg font-medium">{item.val}</p>
+                    {item.link ? (
+                      <a 
+                        href={item.link} 
+                        target={item.link.startsWith('http') ? "_blank" : undefined}
+                        rel={item.link.startsWith('http') ? "noopener noreferrer" : undefined}
+                        className="text-white text-lg font-medium hover:text-primary transition-colors block"
+                      >
+                        {item.val}
+                      </a>
+                    ) : (
+                      <p className="text-white text-lg font-medium">{item.val}</p>
+                    )}
                   </div>
                 </motion.div>
               ))}
@@ -86,9 +102,9 @@ export const ContactSection = () => {
           </motion.div>
         </div>
 
-        <div className="mt-24 h-[450px] rounded-[2.5rem] overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-700">
+        <div className="mt-24 h-[450px] rounded-[2.5rem] overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 relative group">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3548.123456789!2d77.6789!3d27.4923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDI5JzMyLjMiTiA3N8KwNDAnNDQuMCJF!5e0!3m2!1sen!2sin!4v1625000000000!5m2!1sen!2sin" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3548.6015638202594!2d77.67634947491764!3d27.200326447936186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3973710037a4d617%3A0x8686d1f9c0993099!2sShree%20Khatu%20Shyam%20Motors!5e0!3m2!1sen!2sin!4v1741705150000!5m2!1sen!2sin" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
@@ -96,6 +112,15 @@ export const ContactSection = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
+          <div className="absolute inset-0 bg-dark/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+          <a 
+            href="https://maps.app.goo.gl/3cy4Vz4fLxjHuScAA" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-8 py-4 rounded-2xl font-bold shadow-2xl opacity-0 group-hover:opacity-100 transition-all hover:scale-105"
+          >
+            View on Google Maps
+          </a>
         </div>
       </div>
     </section>
