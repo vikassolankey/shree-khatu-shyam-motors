@@ -53,7 +53,14 @@ export const TopHeader = () => (
           className="flex items-center gap-2 hover:text-primary transition-colors"
         >
           <Phone className="w-3 h-3 text-primary" />
-          +91 8218258915
+          +91 8218258915 
+        </a>
+         <a
+          href="tel:8218258915"
+          className="flex items-center gap-2 hover:text-primary transition-colors"
+        >
+          <Phone className="w-3 h-3 text-primary" />
+           +91 9389348674
         </a>
       </div>
     </div>
@@ -85,8 +92,8 @@ export const Navbar = () => {
       className={cn(
         "sticky top-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-dark/80 backdrop-blur-lg py-3 shadow-xl"
-          : "bg-transparent py-5",
+          ? "bg-dark/80 backdrop-blur-lg py-1 shadow-xl"
+          : "bg-transparent py-2",
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -94,17 +101,17 @@ export const Navbar = () => {
           <img
             src={LOGO_SRC}
             alt="Shree Khatu Shyam Motors logo"
-            className="w-10 h-10 rounded-lg object-contain bg-white/5 group-hover:rotate-12 transition-transform"
+            className="h-16 md:h-20 w-auto rounded-lg object-contain group-hover:scale-110 transition-transform"
             referrerPolicy="no-referrer"
           />
-          <div className="flex flex-col">
+          {/* <div className="flex flex-col">
             <span className="font-display font-bold text-lg leading-none tracking-tight">
               SHREE KHATU SHYAM
             </span>
             <span className="text-primary font-bold text-sm tracking-[0.2em] leading-none">
               MOTORS
             </span>
-          </div>
+          </div> */}
         </Link>
 
         {/* Desktop Menu */}
@@ -169,7 +176,7 @@ export const Navbar = () => {
                   <img
                     src={LOGO_SRC}
                     alt="Logo"
-                    className="w-8 h-8 rounded-xl object-contain"
+                    className="h-12 w-auto rounded-xl object-contain"
                     referrerPolicy="no-referrer"
                   />
                   <span className="font-display font-bold text-xl">
@@ -277,17 +284,10 @@ export const Footer = () => (
             <img
               src={LOGO_SRC}
               alt="Logo"
-              className="w-8 h-8 rounded-xl object-contain"
+              className="h-20 md:h-24 w-auto rounded-xl object-contain"
               referrerPolicy="no-referrer"
             />
-            <div className="flex flex-col">
-              <span className="font-display font-bold text-xl leading-none">
-                SHREE KHATU SHYAM
-              </span>
-              <span className="text-primary font-bold text-xs tracking-[0.2em]">
-                MOTORS
-              </span>
-            </div>
+           
           </Link>
           <p className="text-gray-400 text-sm leading-relaxed">
             Reliable Transport & Trusted Services in Mathura. Delivering
@@ -361,8 +361,16 @@ export const Footer = () => (
               <span>+91 8218258915</span>
             </li>
             <li className="flex gap-3">
+              <Phone className="w-5 h-5 text-primary shrink-0" />
+              <span>+91 9389348674</span>
+            </li>
+            <li className="flex gap-3">
               <Mail className="w-5 h-5 text-primary shrink-0" />
               <span>Info@shreekhatushyammotors.co.in</span>
+            </li>
+             <li className="flex gap-3">
+              <Mail className="w-5 h-5 text-primary shrink-0" />
+              <span>shreekhatushyammotorsmathura@gmail.com</span>
             </li>
           </ul>
           <VisitCounter />
