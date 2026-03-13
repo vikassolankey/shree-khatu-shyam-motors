@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { TopHeader, Navbar, Footer, FloatingActions, ScrollToTop } from './components/Shared';
-import { Hero, Stats, WhyChooseUs, TeamSection } from './components/HomeSections';
+import { Hero, Stats, WhyChooseUs, TeamSection, OwnerSection } from './components/HomeSections';
 import { AboutSection } from './components/AboutSection';
 import { ServicesSection, CertificatesSection } from './components/ServiceSections';
 import { GallerySection, VideoSection, TestimonialsSection } from './components/MediaSections';
@@ -23,12 +23,13 @@ const Home = () => (
   <PageWrapper>
     <Hero />
     <Stats />
+    <ServicesSection limit={6} />
     <AboutSection />
-    <TeamSection />
-    <ServicesSection limit={3} />
     <WhyChooseUs />
     <GallerySection marquee />
     <TestimonialsSection />
+    <OwnerSection />
+    <TeamSection />
     <ContactSection />
   </PageWrapper>
 );

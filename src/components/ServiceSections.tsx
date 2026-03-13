@@ -8,31 +8,36 @@ export const ServicesSection = ({ limit }: { limit?: number }) => {
       title: 'Transportation Services',
       desc: 'Reliable and safe transportation of goods across Mathura and surrounding regions with our modern fleet.',
       icon: Truck,
-      color: 'from-orange-500 to-red-500'
+      color: 'from-orange-500 to-red-500',
+      image: 'https://png.pngtree.com/png-vector/20240613/ourmid/pngtree-chota-hathi-vector-tata-ace-xl-chhota-dala-image-png-image_12726030.png'
     },
     {
       title: 'House Cleaning Services',
       desc: 'Professional deep cleaning services for homes and offices, ensuring a spotless and hygienic environment.',
       icon: Home,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-500 to-cyan-500',
+      image: 'https://th.bing.com/th/id/OIP.uOIHWvn81ejEgSGjlx7xCgHaE7?w=300&h=200&c=7&r=0&o=7&dpr=1.8&pid=1.7&rm=3'
     },
     {
       title: 'Goods Relocation',
       desc: 'Hassle-free shifting of household or office goods with expert packing and careful handling.',
       icon: Package,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-500 to-pink-500',
+      image: 'https://nrirelocation.com/wp-content/uploads/2023/09/shutterstock_2044334057-scaled.jpg'
     },
     {
       title: 'Logistics Support',
       desc: 'Comprehensive logistics solutions for businesses, optimizing supply chain and delivery schedules.',
       icon: Globe,
-      color: 'from-emerald-500 to-teal-500'
+      color: 'from-emerald-500 to-teal-500',
+      image: 'https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&q=80&w=800'
     },
     {
       title: 'Local Transport Solutions',
       desc: 'Quick and efficient local transport for small to medium loads within the city limits.',
       icon: MapPin,
-      color: 'from-amber-500 to-orange-500'
+      color: 'from-amber-500 to-orange-500',
+      image: 'https://th.bing.com/th/id/OIP.51gD1VmvYX1Yl0x69qGl6gHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3'
     }
   ];
 
@@ -55,20 +60,32 @@ export const ServicesSection = ({ limit }: { limit?: number }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6, ease: "easeOut" }}
-              className="group relative p-8 rounded-3xl bg-dark-secondary border border-white/5 hover:border-primary/30 transition-all overflow-hidden"
+              className="group relative rounded-3xl bg-dark-secondary border border-white/5 hover:border-primary/30 transition-all overflow-hidden flex flex-col h-full"
             >
-              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${s.color} opacity-5 blur-3xl group-hover:opacity-20 transition-opacity`} />
-              
-              <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
-                <s.icon className="w-8 h-8 text-primary group-hover:text-white transition-colors" />
+              {/* Service Image */}
+              <div className="relative h-56 overflow-hidden">
+                <img 
+                  src={s.image} 
+                  alt={s.title} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-t from-dark-secondary via-transparent to-transparent opacity-60`} />
               </div>
-              
-              <h4 className="text-2xl font-display font-bold mb-4">{s.title}</h4>
-              <p className="text-gray-400 leading-relaxed mb-8">{s.desc}</p>
-              
-              <button className="flex items-center gap-2 text-primary font-bold group-hover:gap-4 transition-all">
-                Learn More <Truck className="w-4 h-4" />
-              </button>
+
+              <div className="p-8 flex flex-col flex-grow">
+                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${s.color} opacity-5 blur-3xl group-hover:opacity-20 transition-opacity`} />
+                
+                <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+                  <s.icon className="w-8 h-8 text-primary group-hover:text-white transition-colors" />
+                </div>
+                
+                <h4 className="text-2xl font-display font-bold mb-4">{s.title}</h4>
+                <p className="text-gray-400 leading-relaxed mb-8 flex-grow">{s.desc}</p>
+                
+                <button className="flex items-center gap-2 text-primary font-bold group-hover:gap-4 transition-all">
+                  Learn More <Truck className="w-4 h-4" />
+                </button>
+              </div>
             </motion.div>
           ))}
         </div>

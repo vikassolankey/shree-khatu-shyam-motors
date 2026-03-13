@@ -3,11 +3,6 @@ import { motion } from 'framer-motion';
 import { Truck, Shield, Clock, Users, Mail, Phone, MapPin } from 'lucide-react';
 
 export const AboutSection = () => {
-  const owners = [
-    { name: 'Thakur Vishnu Rajavat', role: 'Managing Director', image: 'gallery/vishnu.jpeg' },
-    { name: 'Thakur Mahesh Rajavat', role: 'Operations Head', image: 'gallery/mahesh.jpeg' },
-  ];
-
   return (
     <section className="py-24 bg-dark overflow-hidden">
       <div className="container mx-auto px-4">
@@ -83,32 +78,7 @@ export const AboutSection = () => {
           </motion.div>
         </div>
 
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Leadership</h2>
-          <h3 className="text-3xl md:text-5xl font-display font-bold">Meet Our Owners</h3>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
-          {owners.map((owner, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.2 }}
-              className="group relative"
-            >
-              <div className="relative h-[400px] md:h-[500px] rounded-[2.5rem] md:rounded-[3rem] overflow-hidden border border-white/10">
-                <img src={owner.image} alt={owner.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" referrerPolicy="no-referrer" />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10 text-center">
-                  <h4 className="text-2xl md:text-3xl font-display font-bold mb-2">{owner.name}</h4>
-                  <p className="text-primary font-bold uppercase tracking-[0.2em] text-xs md:text-sm">{owner.role}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );

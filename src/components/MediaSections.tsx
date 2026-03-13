@@ -23,9 +23,9 @@ export const GallerySection = ({ marquee = false }: { marquee?: boolean }) => {
                 { url: 'gallery/gall12.jpeg', category: 'Transport' },
     { url: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800', category: 'Logistics' },
     { url: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=800', category: 'Fleet' },
-    { url: 'https://images.unsplash.com/photo-1501700489910-fb3a7eaa0d71?auto=format&fit=crop&q=80&w=800', category: 'Cleaning' },
-    { url: 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaad5b?auto=format&fit=crop&q=80&w=800', category: 'Relocation' },
-    { url: 'https://images.unsplash.com/photo-1516216628859-9bccecab13ca?auto=format&fit=crop&q=80&w=800', category: 'Transport' },
+    { url: 'https://th.bing.com/th/id/OIP.HnU9a1YLqsLJVmkLAHIV-gHaEK?w=332&h=186&c=7&r=0&o=7&dpr=1.8&pid=1.7&rm=3', category: 'Cleaning' },
+    { url: 'https://th.bing.com/th/id/OIP.PXixcFIjGeC8BRdB6twCvAHaFj?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3', category: 'Relocation' },
+    { url: 'https://tse4.mm.bing.net/th/id/OIP.ofAXphxur4IBZBYWh6Cl-AHaHa?w=3333&h=3333&rs=1&pid=ImgDetMain&o=7&rm=3', category: 'Transport' },
   ];
 
   if (marquee) {

@@ -198,11 +198,11 @@ export const Stats = () => {
 
 export const WhyChooseUs = () => {
   const features = [
-    { title: 'Trusted Local Service', desc: 'Deeply rooted in Mathura with years of local expertise.', icon: Shield },
-    { title: 'Professional Team', desc: 'Skilled drivers and cleaning professionals at your service.', icon: Users },
-    { title: 'Affordable Pricing', desc: 'Premium quality services that fit your budget perfectly.', icon: ThumbsUp },
-    { title: 'Fast Response', desc: 'Quick turnaround time for all your transport and cleaning needs.', icon: Clock },
-    { title: 'Customer Satisfaction', desc: 'Our priority is your peace of mind and satisfaction.', icon: Star },
+    { title: 'Trusted Local Service', desc: 'Deeply rooted in Mathura with years of local expertise.', icon: Shield, image: 'https://tse1.mm.bing.net/th/id/OIP.YRNyMHa5FN3fPeduynijnwHaDp?w=1920&h=947&rs=1&pid=ImgDetMain&o=7&rm=3' },
+    { title: 'Professional Team', desc: 'Skilled drivers and cleaning professionals at your service.', icon: Users, image: 'https://images.unsplash.com/photo-1556742212-5b321f3c261b?auto=format&fit=crop&q=80&w=800' },
+    { title: 'Affordable Pricing', desc: 'Premium quality services that fit your budget perfectly.', icon: ThumbsUp, image: 'https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&q=80&w=800' },
+    { title: 'Fast Response', desc: 'Quick turnaround time for all your transport and cleaning needs.', icon: Clock, image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800' },
+    { title: 'Customer Satisfaction', desc: 'Our priority is your peace of mind and satisfaction.', icon: Star, image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=800' },
   ];
 
   return (
@@ -222,13 +222,61 @@ export const WhyChooseUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-8 rounded-3xl border border-white/5 bg-white/5 hover:bg-white/10 transition-all group"
+              className="rounded-3xl border border-white/5 bg-white/5 hover:bg-white/10 transition-all group flex flex-col"
             >
-              <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-6 transition-transform">
-                <f.icon className="w-7 h-7 text-white" />
+              <div className="relative h-48 overflow-hidden rounded-t-3xl">
+                <img src={f.image} alt={f.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-2 group-hover:rotate-6 transition-transform">
+                    <f.icon className="w-6 h-6 text-white" />
+                  </div>
+                </div>
               </div>
-              <h4 className="text-xl font-display font-bold mb-4">{f.title}</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">{f.desc}</p>
+              <div className="p-6 flex-grow flex flex-col">
+                <h4 className="text-xl font-display font-bold mb-2">{f.title}</h4>
+                <p className="text-gray-400 text-sm leading-relaxed flex-grow">{f.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export const OwnerSection = () => {
+  const owners = [
+    { name: 'Thakur Vishnu Rajavat', role: 'Managing Director', image: 'gallery/vishnu.jpeg' },
+    { name: 'Thakur Mahesh Rajavat', role: 'Operations Head', image: 'gallery/mahesh.jpeg' },
+  ];
+
+  return (
+    <section className="py-24 bg-dark-secondary overflow-hidden">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16 md:mb-20">
+          <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">Leadership</h2>
+          <h3 className="text-3xl md:text-5xl font-display font-bold">Meet Our Owners</h3>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
+          {owners.map((owner, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.2 }}
+              className="group relative"
+            >
+              <div className="relative h-[400px] md:h-[500px] rounded-[2.5rem] md:rounded-[3rem] overflow-hidden border border-white/10">
+                <img src={owner.image} alt={owner.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" referrerPolicy="no-referrer" />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10 text-center">
+                  <h4 className="text-2xl md:text-3xl font-display font-bold mb-2">{owner.name}</h4>
+                  <p className="text-primary font-bold uppercase tracking-[0.2em] text-xs md:text-sm">{owner.role}</p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

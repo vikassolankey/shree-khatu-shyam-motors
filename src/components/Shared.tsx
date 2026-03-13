@@ -352,7 +352,7 @@ export const Footer = () => (
             <li className="flex gap-3">
               <MapPin className="w-5 h-5 text-primary shrink-0" />
               <a 
-                href="https://maps.app.goo.gl/3cy4Vz4fLxjHuScAA" 
+                href="https://www.google.com/maps/place/Shree+Khatu+Shyam+Motors+Mathura/data=!4m2!3m1!1s0x0:0xa7c1ba73dd87cf74?sa=X&ved=1t:2428&ictx=111" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"

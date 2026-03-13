@@ -24,7 +24,7 @@ export const ContactSection = () => {
                   icon: MapPin, 
                   label: 'Our Office', 
                   val: 'Ground Floor, Service Rd, nearby 1 Mandi Chauraha, Surya Nagar, Mathura, UP 281004',
-                  link: 'https://maps.app.goo.gl/3cy4Vz4fLxjHuScAA'
+                  link: 'https://www.google.com/maps/place/Shree+Khatu+Shyam+Motors+Mathura/data=!4m2!3m1!1s0x0:0xa7c1ba73dd87cf74?sa=X&ved=1t:2428&ictx=111'
                 },
                 { icon: Phone, label: 'Call Us', val: '+91 8218258915', link: 'tel:+918218258915' },
                 { icon: Mail, label: 'Email Us', val: 'Info@shreekhatushyammotors.co.in', link: 'mailto:Info@shreekhatushyammotors.co.in' },
@@ -114,7 +114,7 @@ export const ContactSection = () => {
           ></iframe>
           <div className="absolute inset-0 bg-dark/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
           <a 
-            href="https://maps.app.goo.gl/3cy4Vz4fLxjHuScAA" 
+            href="https://www.google.com/maps/place/Shree+Khatu+Shyam+Motors+Mathura/data=!4m2!3m1!1s0x0:0xa7c1ba73dd87cf74?sa=X&ved=1t:2428&ictx=111" 
             target="_blank" 
             rel="noopener noreferrer"
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-8 py-4 rounded-2xl font-bold shadow-2xl opacity-0 group-hover:opacity-100 transition-all hover:scale-105"
