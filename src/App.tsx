@@ -5,6 +5,7 @@ import { TopHeader, Navbar, Footer, FloatingActions, ScrollToTop } from './compo
 import { Hero, Stats, WhyChooseUs, TeamSection, OwnerSection } from './components/HomeSections';
 import { AboutSection } from './components/AboutSection';
 import { ServicesSection, CertificatesSection } from './components/ServiceSections';
+import { RelocationDetails } from './components/RelocationDetails';
 import { GallerySection, VideoSection, TestimonialsSection } from './components/MediaSections';
 import { ContactSection } from './components/ContactSection';
 
@@ -24,6 +25,7 @@ const Home = () => (
     <Hero />
     <Stats />
     <ServicesSection limit={6} />
+    <RelocationDetails />
     <AboutSection />
     <WhyChooseUs />
     <GallerySection marquee />

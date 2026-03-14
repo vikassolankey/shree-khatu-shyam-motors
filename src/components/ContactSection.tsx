@@ -24,7 +24,7 @@ export const ContactSection = () => {
                   icon: MapPin, 
                   label: 'Our Office', 
                   val: 'Ground Floor, Service Rd, nearby 1 Mandi Chauraha, Surya Nagar, Mathura, UP 281004',
-                  link: 'https://www.google.com/maps/place/Shree+Khatu+Shyam+Motors+Mathura/data=!4m2!3m1!1s0x0:0xa7c1ba73dd87cf74?sa=X&ved=1t:2428&ictx=111'
+                  link: 'https://www.google.com/maps/place/Shree+Khatu+Shyam+Motors+Mathura/@27.4866826,77.6552841,18z/data=!4m14!1m7!3m6!1s0x3973718a0232c591:0xa7c1ba73dd87cf74!2sShree+Khatu+Shyam+Motors+Mathura!8m2!3d27.4865898!4d77.6553136!16s%2Fg%2F11n54qjyl1!3m5!1s0x3973718a0232c591:0xa7c1ba73dd87cf74!8m2!3d27.4865898!4d77.6553136!16s%2Fg%2F11n54qjyl1?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D'
                 },
                 { icon: Phone, label: 'Call Us', val: '+91 8218258915', link: 'tel:+918218258915' },
                 { icon: Mail, label: 'Email Us', val: 'Info@shreekhatushyammotors.co.in', link: 'mailto:Info@shreekhatushyammotors.co.in' },
@@ -104,7 +104,7 @@ export const ContactSection = () => {
 
         <div className="mt-24 h-[450px] rounded-[2.5rem] overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 relative group">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3548.6015638202594!2d77.67634947491764!3d27.200326447936186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3973710037a4d617%3A0x8686d1f9c0993099!2sShree%20Khatu%20Shyam%20Motors!5e0!3m2!1sen!2sin!4v1741705150000!5m2!1sen!2sin" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3544.123456789!2d77.6552841!3d27.4866826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3973718a0232c591%3A0xa7c1ba73dd87cf74!2sShree+Khatu+Shyam+Motors+Mathura!5e0!3m2!1sen!2sin!4v1710400000000!5m2!1sen!2sin" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
@@ -114,7 +114,7 @@ export const ContactSection = () => {
           ></iframe>
           <div className="absolute inset-0 bg-dark/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
           <a 
-            href="https://www.google.com/maps/place/Shree+Khatu+Shyam+Motors+Mathura/data=!4m2!3m1!1s0x0:0xa7c1ba73dd87cf74?sa=X&ved=1t:2428&ictx=111" 
+            href="https://www.google.com/maps/place/Shree+Khatu+Shyam+Motors+Mathura/@27.4866826,77.6552841,18z/data=!4m14!1m7!3m6!1s0x3973718a0232c591:0xa7c1ba73dd87cf74!2sShree+Khatu+Shyam+Motors+Mathura!8m2!3d27.4865898!4d77.6553136!16s%2Fg%2F11n54qjyl1!3m5!1s0x3973718a0232c591:0xa7c1ba73dd87cf74!8m2!3d27.4865898!4d77.6553136!16s%2Fg%2F11n54qjyl1?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D" 
             target="_blank" 
             rel="noopener noreferrer"
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-8 py-4 rounded-2xl font-bold shadow-2xl opacity-0 group-hover:opacity-100 transition-all hover:scale-105"

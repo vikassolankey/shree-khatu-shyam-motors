@@ -198,11 +198,11 @@ export const Stats = () => {
 
 export const WhyChooseUs = () => {
   const features = [
-    { title: 'Trusted Local Service', desc: 'Deeply rooted in Mathura with years of local expertise.', icon: Shield, image: 'https://tse1.mm.bing.net/th/id/OIP.YRNyMHa5FN3fPeduynijnwHaDp?w=1920&h=947&rs=1&pid=ImgDetMain&o=7&rm=3' },
-    { title: 'Professional Team', desc: 'Skilled drivers and cleaning professionals at your service.', icon: Users, image: 'https://images.unsplash.com/photo-1556742212-5b321f3c261b?auto=format&fit=crop&q=80&w=800' },
-    { title: 'Affordable Pricing', desc: 'Premium quality services that fit your budget perfectly.', icon: ThumbsUp, image: 'https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&q=80&w=800' },
-    { title: 'Fast Response', desc: 'Quick turnaround time for all your transport and cleaning needs.', icon: Clock, image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800' },
-    { title: 'Customer Satisfaction', desc: 'Our priority is your peace of mind and satisfaction.', icon: Star, image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=800' },
+    { title: 'Trusted Local Service', desc: 'Deeply rooted in Mathura with years of local expertise.', icon: Shield, image: 'https://static.vecteezy.com/system/resources/thumbnails/055/396/471/small_2x/delivery-truck-leaving-warehouse-loading-dock-with-packages-photo.jpg' },
+    { title: 'Professional Team', desc: 'Skilled drivers and cleaning professionals at your service.', icon: Users, image: 'https://th.bing.com/th/id/OIP.BmZMpe-yBA9vKZ_FVFrTxgHaE7?w=246&h=180&c=7&r=0&o=7&dpr=1.8&pid=1.7&rm=3' },
+    { title: 'Affordable Pricing', desc: 'Premium quality services that fit your budget perfectly.', icon: ThumbsUp, image: 'https://img.freepik.com/premium-photo/business-team-achievement-get-dollars-banknotes-from-boss-meeting_38810-7537.jpg' },
+    { title: 'Fast Response', desc: 'Quick turnaround time for all your transport and cleaning needs.', icon: Clock, image: 'https://th.bing.com/th/id/OIP.-cgJ4rFUGOFBBEx5Arqi0QHaE7?w=279&h=186&c=7&r=0&o=7&dpr=1.8&pid=1.7&rm=3' },
+    { title: 'Customer Satisfaction', desc: 'Our priority is your peace of mind and satisfaction.', icon: Star, image: 'https://tse3.mm.bing.net/th/id/OIP.0X-z4R2AYbi2CxH_haWTwwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },
   ];
 
   return (

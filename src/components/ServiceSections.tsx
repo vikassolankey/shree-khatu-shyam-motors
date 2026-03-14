@@ -9,7 +9,7 @@ export const ServicesSection = ({ limit }: { limit?: number }) => {
       desc: 'Reliable and safe transportation of goods across Mathura and surrounding regions with our modern fleet.',
       icon: Truck,
       color: 'from-orange-500 to-red-500',
-      image: 'https://png.pngtree.com/png-vector/20240613/ourmid/pngtree-chota-hathi-vector-tata-ace-xl-chhota-dala-image-png-image_12726030.png'
+      image: 'https://as1.ftcdn.net/v2/jpg/10/24/22/90/1000_F_1024229081_guke09PuRSIKIDQoGChKJHQHDBJ6zzc2.jpg'
     },
     {
       title: 'House Cleaning Services',
